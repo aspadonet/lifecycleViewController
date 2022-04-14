@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cupleVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upc-1y-wL0">
+                                <rect key="frame" x="89" y="376" width="236" height="144"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="236" id="Amj-Ke-Fpe"/>
+                                    <constraint firstAttribute="height" constant="144" id="nmg-Ld-VZL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="second"/>
+                                <connections>
+                                    <segue destination="pgg-1o-LM3" kind="modal" identifier="segueTwo" modalPresentationStyle="fullScreen" id="l61-bh-IoO">
+                                        <segue key="commit" inheritsFrom="parent" id="nrH-py-IUo"/>
+                                        <segue key="preview" inheritsFrom="commit" id="bRE-YD-yqV"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="upc-1y-wL0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VJM-47-Yku"/>
+                            <constraint firstItem="upc-1y-wL0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wzj-2x-lZp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="lNl-iB-IqI">
+            <objects>
+                <viewController id="pgg-1o-LM3" customClass="SecondViewController" customModule="cupleVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tlx-um-KZv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="161-2g-6sR">
+                                <rect key="frame" x="94.5" y="346" width="225" height="150"/>
+                                <color key="backgroundColor" red="0.63137254899999995" green="0.85490196080000003" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
+                                <state key="normal" title="Open one"/>
+                                <connections>
+                                    <action selector="close:" destination="pgg-1o-LM3" eventType="touchUpInside" id="ESR-cP-rC8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVc-uq-XV9">
+                                <rect key="frame" x="94.5" y="606" width="225" height="150"/>
+                                <color key="backgroundColor" red="0.63137254899999995" green="0.85490196080000003" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="GXk-sn-vLY"/>
+                                    <constraint firstAttribute="height" constant="150" id="Hkj-wd-mE1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
+                                <state key="normal" title="Open one"/>
+                                <connections>
+                                    <segue destination="xHP-MA-7vL" kind="presentation" modalPresentationStyle="fullScreen" id="aCi-Bs-nxS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FVc-uq-XV9" firstAttribute="top" secondItem="161-2g-6sR" secondAttribute="bottom" constant="56" id="IL0-6v-caE"/>
+                            <constraint firstItem="FVc-uq-XV9" firstAttribute="leading" secondItem="161-2g-6sR" secondAttribute="leading" id="Pv7-YA-Y53"/>
+                            <constraint firstItem="bnL-Eu-dcU" firstAttribute="bottom" secondItem="FVc-uq-XV9" secondAttribute="bottom" constant="106" id="cmN-zq-PIg"/>
+                            <constraint firstItem="FVc-uq-XV9" firstAttribute="centerX" secondItem="Tlx-um-KZv" secondAttribute="centerX" id="krq-bk-RqS"/>
+                            <constraint firstItem="FVc-uq-XV9" firstAttribute="trailing" secondItem="161-2g-6sR" secondAttribute="trailing" id="xLL-Pl-JdY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bnL-Eu-dcU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="o2s-PO-Um6"/>
+                    <connections>
+                        <outlet property="closeButton" destination="161-2g-6sR" id="9fU-NF-lIf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FQI-6j-FtL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982.60869565217399" y="136.60714285714286"/>
+        </scene>
+        <!--Three View Controller-->
+        <scene sceneID="mCY-St-LcB">
+            <objects>
+                <viewController id="xHP-MA-7vL" customClass="ThreeViewController" customModule="cupleVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Tt-m0-A8R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8h-Zr-Gbt">
+                                <rect key="frame" x="115" y="362" width="184" height="172"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="2yj-TY-MeV"/>
+                                    <constraint firstAttribute="height" constant="172" id="Fvt-9m-8XU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <state key="normal" title="two"/>
+                                <connections>
+                                    <action selector="clouse:" destination="xHP-MA-7vL" eventType="touchUpInside" id="Geb-to-Wfg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="n8h-Zr-Gbt" firstAttribute="centerY" secondItem="2Tt-m0-A8R" secondAttribute="centerY" id="0Aa-3N-dlr"/>
+                            <constraint firstItem="n8h-Zr-Gbt" firstAttribute="centerX" secondItem="2Tt-m0-A8R" secondAttribute="centerX" id="Sr5-DQ-jfJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uV5-ip-7Px"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iva-pn-eKQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Kx-DE-hvg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1782.608695652174" y="136.60714285714286"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="l61-bh-IoO"/>
+    </inferredMetricsTieBreakers>
+</document>
